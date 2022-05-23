@@ -13,10 +13,7 @@ const PORT = process.env.PORT || 3002;
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-// Setup middleware function to look up the files relative to the static
-// directory.  The name of the static dir is not part of the URL.
-// Static files are files clients download from the server.  Express, by
-// default does not allow static files, this middleware enables static files.
+// Setup middleware function to look up the files relative to the static directory. 
 app.use(express.static('public'));
 
 // Setup morgan middleware to log HTTP requests and errors
